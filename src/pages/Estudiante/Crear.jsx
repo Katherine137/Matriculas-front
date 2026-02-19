@@ -1,5 +1,5 @@
 import axios from "axios";
-import API from "../config.js";
+import API from "../../config";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";

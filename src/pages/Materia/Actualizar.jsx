@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import API from "../config.js";
+import API from "../../config";
 import "../../css/Materia/Actualizar.css";
 
 const ActMateria = () => {

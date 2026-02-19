@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import API from "../../config";
 import "../../css/Matricula/Crear.css";
 
 const CrearMatricula = () => {

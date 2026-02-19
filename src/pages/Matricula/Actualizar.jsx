@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import API from "../../config";
 import "../../css/Matricula/Actualizar.css";
 
 const ActMatricula = () => {

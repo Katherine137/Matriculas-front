@@ -1,5 +1,5 @@
 import { MdDeleteForever, MdPublishedWithChanges } from "react-icons/md";
-import API from "../config.js";
+import API from "../../config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";

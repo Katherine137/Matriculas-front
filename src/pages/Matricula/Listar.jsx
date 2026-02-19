@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import API from "../../config";
 import "../../css/listarc.css";
 
 const ListMatriculas = () => {

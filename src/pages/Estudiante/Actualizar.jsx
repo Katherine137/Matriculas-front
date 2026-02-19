@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import API from "../config.js";
+import API from "../../config";
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
