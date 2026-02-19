@@ -1,4 +1,5 @@
 import { MdDeleteForever, MdPublishedWithChanges } from "react-icons/md";
+import API from "../config.js";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -12,7 +13,7 @@ const ListEstudiante = () => {
 
   const listEstudiante = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/listarES");
+      const response = await axios.get(`${API}/api/estudiantes/listarES`);
       setEstudiante(response.data);
     } catch (error) {
       console.error("Error al cargar estudiantes:", error);
@@ -25,7 +26,7 @@ const ListEstudiante = () => {
   if (!confirmar) return;
 
   try {
-    await axios.delete(`http://localhost:3000/eliminarES/${id}`);
+    await axios.delete(`${API}/api/estudiantes/eliminarES/${id}`);
     listEstudiante();
   } catch (error) {
     console.error(error);

@@ -12,7 +12,7 @@ const ListMatriculas = () => {
 
   const listMatriculas = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/listarMa");
+      const response = await axios.get(`${API}/api/matricula/listarMa`);
       setMatriculas(response.data);
     } catch (error) {
       console.error("Error al cargar matrículas:", error);
@@ -25,7 +25,7 @@ const ListMatriculas = () => {
   if (!confirmar) return;
 
   try {
-    await axios.delete(`http://localhost:3000/eliminarMa/${id}`);
+    await axios.delete(`${API}/api/matricula/eliminarMa/${id}`);
     listMatriculas();
   } catch (error) {
     console.error(error);

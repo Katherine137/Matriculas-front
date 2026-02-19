@@ -18,8 +18,8 @@ const CrearMatricula = () => {
       const token = localStorage.getItem("token");
       const config = { headers: { Authorization: `Bearer ${token}` } };
       
-      const resEst = await axios.get("http://localhost:3000/listarES", config);
-      const resMat = await axios.get("http://localhost:3000/listarMat", config); 
+      const resEst = await axios.get(`${API}/api/estudiantes/listarES`, config);
+      const resMat = await axios.get(`${API}/api/materias/listarMat`, config); 
 
       setEstudiantes(resEst.data);
       setMaterias(resMat.data);
@@ -37,7 +37,7 @@ const CrearMatricula = () => {
   const onSubmit = async (data) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:3000/Matricula", data, {
+      await axios.post(`${API}/api/matricula/Matricula`, data, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Matrícula creada correctamente");

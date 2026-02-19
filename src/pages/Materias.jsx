@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import API from "../config.js";
 import { useNavigate } from "react-router-dom";
 import "../css/Materias.css";
 
@@ -20,7 +21,7 @@ const Materia = () => {
       }
 
       try {
-        const response = await axios.get("http://localhost:3000/api/perfil", {
+        const response = await axios.get(`${API}/api/usuarios/perfil`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

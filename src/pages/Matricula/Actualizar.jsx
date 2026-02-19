@@ -20,8 +20,8 @@ const ActMatricula = () => {
       const config = { headers: { Authorization: `Bearer ${token}` } };
 
       const [resEst, resMat] = await Promise.all([
-        axios.get("http://localhost:3000/listarES", config),
-        axios.get("http://localhost:3000/listarMat", config)
+        axios.get(`${API}/api/estudiantes/listarES`, config),
+        axios.get(`${API}/api/materias/listarMat`, config)
       ]);
 
       setEstudiantes(resEst.data);
@@ -36,7 +36,7 @@ const ActMatricula = () => {
   useEffect(() => {
     const obtenerMatricula = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/obtenerMa/${id}`);
+        const response = await axios.get(`${API}/api/matricula/obtenerMa/${id}`);
         const matricula = response.data;
 
         setValue("codigo", matricula.codigo);
@@ -54,7 +54,7 @@ const ActMatricula = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.put(`http://localhost:3000/actualizarMa/${id}`, data);
+      await axios.put(`${API}/api/matricula/actualizarMa/${id}`, data);
       alert("Matrícula actualizada correctamente");
       navigate("/listMatriculas");
     } catch (error) {

@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import API from "../config.js";
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -22,7 +23,7 @@ const ActEstudiante = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/obtenerES/${id}`
+          `${API}/api/estudiantes/obtenerES/${id}`
         );
 
         const estudiante = response.data;
@@ -51,7 +52,7 @@ const ActEstudiante = () => {
   const onSubmit = async (data) => {
     try {
       await axios.put(
-        `http://localhost:3000/actualizarES/${id}`,
+        `${API}/api/estudiantes/actualizarES/${id}`,
         data
       );
 

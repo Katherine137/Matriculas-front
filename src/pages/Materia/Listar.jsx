@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import API from "../config.js";
 import "../../css/listarc.css";
 
 const ListMaterias = () => {
@@ -12,7 +13,7 @@ const ListMaterias = () => {
 
   const listMaterias = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/listarMat");
+      const response = await axios.get(`${API}/api/materias/listarMat`);
       setMaterias(response.data);
     } catch (error) {
       console.error("Error al cargar materias:", error);
@@ -25,7 +26,7 @@ const ListMaterias = () => {
   if (!confirmar) return;
 
   try {
-    await axios.delete(`http://localhost:3000/eliminarMat/${id}`);
+    await axios.delete(`${API}/api/materias/eliminarMat/${id}`);
     listMaterias();
   } catch (error) {
     console.error(error);

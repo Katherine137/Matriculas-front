@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import API from "../config.js";
 import "../../css/Materia/Actualizar.css";
 
 const ActMateria = () => {
@@ -20,7 +21,7 @@ const ActMateria = () => {
     const obtenerMateria = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/obtenerMat/${id}`
+          `${API}/api/materias/obtenerMat/${id}`
         );
 
         const materia = response.data;
@@ -41,7 +42,7 @@ const ActMateria = () => {
   const onSubmit = async (data) => {
     try {
       await axios.put(
-        `http://localhost:3000/actualizarMat/${id}`,
+        `${API}/api/materias/actualizarMat/${id}`,
         data
       );
 

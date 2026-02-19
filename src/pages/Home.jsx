@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import API from "../config.js";
 import { useNavigate, Link } from "react-router-dom";
 import "../css/Home.css";
 
@@ -19,7 +20,7 @@ const Home = () => {
       }
 
       try {
-        const response = await axios.get("http://localhost:3000/api/perfil", {
+        const response = await axios.get(`${API}/api/perfil"`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -1,4 +1,5 @@
 import axios from "axios";
+import API from "../config.js";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -17,7 +18,7 @@ const CrearMateria = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:3000/Materia",
+        `${API}/api/materias/Materia`,
         data,
         {
           headers: {
