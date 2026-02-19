@@ -1,3 +1,12 @@
+.error-message {
+  background-color: #f8d7da;   
+  color: #721c24;            
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
 .home-container {
   padding: 40px 20px;
   max-width: 1100px;

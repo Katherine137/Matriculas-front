@@ -6,7 +6,15 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
+.error-message {
+  background-color: #f8d7da;   
+  color: #721c24;            
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
 .form-estudiante h2 {
   text-align: center;
   margin-bottom: 20px;

@@ -29,6 +29,16 @@
   background-color: #f3f4f6; 
 }
 
+.error-message {
+  background-color: #f8d7da;   
+  color: #721c24;            
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
 .loading {
   margin-top: 20px;
   font-weight: bold;
