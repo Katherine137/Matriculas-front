@@ -1,0 +1,105 @@
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.tabla thead {
+  background-color: #1f2937; 
+  color: white;
+}
+
+.tabla th,
+.tabla td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.tabla td{
+  color: #1f2937;
+}
+.tabla tbody tr:hover {
+  background-color: #f3f4f6; 
+}
+
+.loading {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffe5e5;
+  color: #b91c1c;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actualizar {
+  color: #1f2937;
+}
+.actualizar:hover {
+  color: #2563eb;
+}
+
+.info {
+  color: #1f2937;
+}
+.info:hover {
+  color: #16a34a;
+}
+
+.eliminar {
+  color: #7f1d1d;
+}
+.eliminar:hover {
+  color: #dc2626;
+}
+
+.reg {
+  display: block;
+  width: 50px;
+  margin: 20px auto;
+  font-weight: bold;
+  color: #1f2937;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-tabla {
+  text-align: center;
+}
+.reg:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+.list-container {
+  width: 95%;
+  margin: 0 auto;
+  overflow-x: auto;
+}

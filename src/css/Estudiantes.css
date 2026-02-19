@@ -1,0 +1,41 @@
+.estudiante-container {
+  padding: 40px;
+  background-color: #f16f6f57;
+}
+
+.estudiante-header {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.estudiante-card {
+  text-decoration: none;
+  width: 250px;
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.estudiante-card:hover {
+  transform: scale(1.05);
+}
+
+.card-pink {
+  border-color: #f36ee8;
+}
+
+.card-purple {
+  border-color: #7a42fd;
+}
